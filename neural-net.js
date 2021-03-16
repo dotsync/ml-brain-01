@@ -1,8 +1,8 @@
 const brain = require('brain.js');
 
-const network = new brain.NeuralNetwork();
+const numbers = new brain.NeuralNetwork();
 
-network.train([
+numbers.train([
   { input: [0, 0, 0], output: [0] },
   { input: [0, 0, 1], output: [0] },
   { input: [0, 1, 1], output: [0] },
@@ -10,6 +10,6 @@ network.train([
   { input: [1, 1, 1], output: [1] }
 ])
 
-const result = network.run([1, 0, 0])
+const result = numbers.run([1, 0, 0])
 
 console.log(`Prob: ${result}`)
